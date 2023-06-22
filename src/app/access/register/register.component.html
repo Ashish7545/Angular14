@@ -1,1 +1,48 @@
-<p>register works!</p>
+<mat-card>
+  <mat-card-title>User Registration</mat-card-title>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="reactiveform" (ngSubmit)="SaveUser()" >
+
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="Username" formControlName="username" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="password" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Aadhar ID</mat-label>
+        <input matInput placeholder="Aadhar Id" formControlName="aadharId" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="City" formControlName="city" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="State" formControlName="state" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Pin Code</mat-label>
+        <input matInput placeholder="Pin Code" formControlName="pinCode" >
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button type="submit" color="primary">Register</button>
+        <a mat-raised-button style="margin: 5px;" color="accent" (click)="RedirectLogin()">Close</a>
+      </div>
+    </form>
+
+  </mat-card-content>
+</mat-card>
